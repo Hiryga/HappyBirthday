@@ -1,0 +1,117 @@
+<!-- invite.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пиратская вечеринка</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background:
+                url("https://img.freepik.com/free-vector/hand-drawn-old-paper-texture_23-2151115130.jpg") center/cover fixed no-repeat,
+                #1a0f05;
+            color: #2b1703;
+        }
+        .overlay {
+            background: rgba(0,0,0,0.6);
+            min-height: 100vh;
+            padding: 40px 10px;
+            box-sizing: border-box;
+        }
+        .card {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(245,230,179,0.95);
+            border-radius: 18px;
+            border: 3px solid #5b3614;
+            box-shadow: 0 0 25px rgba(0,0,0,0.8);
+            padding: 28px 26px 30px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .seal {
+            position: absolute;
+            top: -35px;
+            right: 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: #111 url("rodger.png") center/90% no-repeat;
+            border: 3px solid #7b0000;
+            box-shadow: 0 0 10px rgba(0,0,0,0.7);
+        }
+        h1 {
+            margin-top: 0;
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        h2 {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 22px;
+        }
+        .content {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .content strong {
+            font-weight: 700;
+        }
+        .details {
+            margin-top: 18px;
+            padding: 14px 16px;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.6);
+            border: 2px dashed #5b3614;
+        }
+        .details p {
+            margin: 4px 0;
+        }
+        .rum-row {
+            margin-top: 18px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            font-size: 15px;
+        }
+        .tag {
+            padding: 6px 10px;
+            border-radius: 6px;
+            background: #5b3614;
+            color: #f5e6b3;
+        }
+    </style>
+</head>
+<body>
+<div class="overlay">
+    <div class="card">
+        <div class="seal" title="Чёрная метка пирата"></div>
+
+        <h1>Пиратская вечеринка</h1>
+        <h2>Ты получил чёрную метку!</h2>
+
+        <div class="content">
+            <p>Капитан объявляет сбор отважных мореходов на тайной пиратской сходке с ромом, сокровищами и морскими байками.</p>
+            <p>Тебя ждут бочки рома, пиратская музыка, карты сокровищ и испытания для настоящих корсаров.</p>
+        </div>
+
+        <div class="details">
+            <p><strong>Сходка назначена на 27.12 в три часа по полудне.</strong></p>
+            <p><strong>Место:</strong> Летучий Голландец (Склизкова 88, 9 этаж, 66 кв).</p>
+            <p><strong>Дресс-код:</strong> повязки на глаз, тельняшки, шляпы капитанов и прочие пиратские причиндалы.</p>
+        </div>
+
+        <div class="rum-row">
+            <span class="tag">Ром льётся рекой</span>
+            <span class="tag">Пиратские конкурсы</span>
+            <span class="tag">Охота за сокровищами</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
