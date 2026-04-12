@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Три числа (Билет 21)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .container { max-width: 400px; border: 1px solid #ccc; padding: 20px; }
+        input { margin-top: 5px; padding: 5px; width: 100%; box-sizing: border-box; }
+        .row { margin-top: 10px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Введите три числа</h2>
+    <form action="b21.php" method="post">
+        <div class="row">
+            <label>Число 1:</label>
+            <input type="number" name="a" step="0.01">
+        </div>
+        <div class="row">
+            <label>Число 2:</label>
+            <input type="number" name="b" step="0.01">
+        </div>
+        <div class="row">
+            <label>Число 3:</label>
+            <input type="number" name="c" step="0.01">
+        </div>
+        <div class="row">
+            <input type="submit" value="Пуск">
+            <input type="reset" value="Очистить">
+        </div>
+    </form>
+</div>
+</body>
+</html>

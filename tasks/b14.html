@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Подписка (Билет 14)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .container { max-width: 400px; border: 1px solid #ccc; padding: 20px; }
+        label { display: block; margin-top: 10px; }
+        select, input, button { margin-top: 5px; width: 100%; padding: 5px; box-sizing: border-box; }
+        .result { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Оформление подписки</h2>
+
+    <label for="period">Период:</label>
+    <select id="period">
+        <option value="" disabled selected>Выберите...</option>
+        <option value="1">1 месяц</option>
+        <option value="3">3 месяца</option>
+        <option value="6">6 месяцев</option>
+        <option value="12">12 месяцев</option>
+    </select>
+
+    <label for="price">Цена за месяц (руб):</label>
+    <input type="number" id="price" value="300" min="0">
+
+    <button id="calcBtn">Рассчитать</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    document.getElementById('calcBtn').addEventListener('click', function () {
+        const period = parseInt(document.getElementById('period').value);
+        const price = parseFloat(document.getElementById('price').value);
+        const res = document.getElementById('result');
+
+        if (isNaN(period) || isNaN(price)) {
+            res.textContent = 'Заполните все поля.';
+            return;
+        }
+
+        const total = period * price;
+        res.textContent = 'Стоимость подписки: ' + total.toFixed(2) + ' руб.';
+    });
+</script>
+</body>
+</html>

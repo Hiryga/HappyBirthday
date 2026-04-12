@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Абзацы с разным оформлением</title>
+    <link rel="stylesheet" href="styles9.css">
+    <style>
+        /* Внутренний стиль: увеличенная первая буква 1-го абзаца */
+        p.first::first-letter {
+            font-size: 200%;
+            font-weight: bold;
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+<h1>Пример оформления абзацев</h1>
+
+<p class="first">
+    Первый абзац начинается с увеличенной первой буквы. Остальной текст обычный.
+</p>
+
+<p class="second">
+    Второй абзац должен всегда отображаться курсивом. Этот стиль задаётся
+    во внешнем таблице стилей.
+</p>
+</body>
+</html>

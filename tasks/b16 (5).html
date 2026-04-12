@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Графическое меню (Билет 16)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .menu { display: flex; align-items: center; gap: 10px; }
+        .buttons { display: flex; flex-direction: column; gap: 5px; }
+        button { width: 150px; padding: 8px; cursor: pointer; }
+        .arrow { font-size: 24px; visibility: hidden; }
+    </style>
+</head>
+<body>
+<h2>Графическое меню</h2>
+
+<div class="menu">
+    <div class="arrow" id="arrow">➤</div>
+    <div class="buttons">
+        <button data-url="https://www.google.com">Ссылка 1</button>
+        <button data-url="https://www.yandex.ru">Ссылка 2</button>
+        <button data-url="https://www.github.com">Ссылка 3</button>
+    </div>
+</div>
+
+<script>
+    const arrow = document.getElementById('arrow');
+    const buttons = document.querySelectorAll('.buttons button');
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const rectBtn = btn.getBoundingClientRect();
+            const rectArrow = arrow.getBoundingClientRect();
+
+            arrow.style.position = 'absolute';
+            arrow.style.left = (rectBtn.left - rectArrow.width - 10) + 'px';
+            arrow.style.top = (rectBtn.top + (rectBtn.height - rectArrow.height) / 2) + 'px';
+            arrow.style.visibility = 'visible';
+
+            window.location.href = btn.dataset.url;
+        });
+    });
+</script>
+</body>
+</html>

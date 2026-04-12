@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Площадь фигуры (Билет 15)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .container { max-width: 400px; border: 1px solid #ccc; padding: 20px; }
+        label { display: block; margin-top: 10px; }
+        select, input, button { margin-top: 5px; width: 100%; padding: 5px; box-sizing: border-box; }
+        .result { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Вычисление площади</h2>
+
+    <label for="figure">Фигура:</label>
+    <select id="figure">
+        <option value="" disabled selected>Выберите...</option>
+        <option value="circle">Круг</option>
+        <option value="square">Квадрат</option>
+    </select>
+
+    <label for="value" id="valueLabel">Радиус/сторона:</label>
+    <input type="number" id="value" step="0.01" min="0">
+
+    <button id="calcBtn">Рассчитать</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    const figure = document.getElementById('figure');
+    const label = document.getElementById('valueLabel');
+
+    figure.addEventListener('change', function () {
+        if (figure.value === 'circle') {
+            label.textContent = 'Радиус круга:';
+        } else if (figure.value === 'square') {
+            label.textContent = 'Сторона квадрата:';
+        }
+    });
+
+    document.getElementById('calcBtn').addEventListener('click', function () {
+        const fig = figure.value;
+        const val = parseFloat(document.getElementById('value').value);
+        const res = document.getElementById('result');
+
+        if (!fig || isNaN(val) || val <= 0) {
+            res.textContent = 'Выберите фигуру и введите положительное число.';
+            return;
+        }
+
+        let area;
+        if (fig === 'circle') {
+            area = Math.PI * val * val;
+        } else {
+            area = val * val;
+        }
+
+        res.textContent = 'Площадь: ' + area.toFixed(2);
+    });
+</script>
+</body>
+</html>

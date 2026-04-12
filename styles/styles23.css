@@ -1,0 +1,6 @@
+/* внешняя таблица стилей: первая буква абзаца */
+p.styled::first-letter {
+    font-size: 220%;
+    color: blue;
+    font-weight: bold;
+}

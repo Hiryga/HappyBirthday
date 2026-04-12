@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Любители мороженого и шоколада</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .container { max-width: 600px; border: 1px solid #ccc; padding: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { border: 1px solid #999; padding: 5px; text-align: left; }
+        .lists { display: flex; gap: 20px; margin-top: 20px; }
+        ul { border: 1px solid #ccc; padding: 10px; width: 50%; min-height: 80px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Анкета предпочтений</h2>
+
+    <table>
+        <tr>
+            <th>Имя</th>
+            <th>Любит мороженое</th>
+            <th>Любит шоколад</th>
+        </tr>
+        <tr>
+            <td><input type="text" class="name"></td>
+            <td><input type="checkbox" class="ice"></td>
+            <td><input type="checkbox" class="choc"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="name"></td>
+            <td><input type="checkbox" class="ice"></td>
+            <td><input type="checkbox" class="choc"></td>
+        </tr>
+        <tr>
+            <td><input type="text" class="name"></td>
+            <td><input type="checkbox" class="ice"></td>
+            <td><input type="checkbox" class="choc"></td>
+        </tr>
+    </table>
+
+    <button id="showBtn">Показать списки</button>
+
+    <div class="lists">
+        <div>
+            <h3>Любители мороженого</h3>
+            <ul id="iceList"></ul>
+        </div>
+        <div>
+            <h3>Любители шоколада</h3>
+            <ul id="chocList"></ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.getElementById('showBtn').addEventListener('click', function () {
+        const names = document.querySelectorAll('.name');
+        const iceChecks = document.querySelectorAll('.ice');
+        const chocChecks = document.querySelectorAll('.choc');
+
+        const iceList = document.getElementById('iceList');
+        const chocList = document.getElementById('chocList');
+
+        iceList.innerHTML = '';
+        chocList.innerHTML = '';
+
+        for (let i = 0; i < names.length; i++) {
+            const name = names[i].value.trim();
+            if (!name) continue;
+
+            if (iceChecks[i].checked) {
+                const li = document.createElement('li');
+                li.textContent = name;
+                iceList.appendChild(li);
+            }
+            if (chocChecks[i].checked) {
+                const li = document.createElement('li');
+                li.textContent = name;
+                chocList.appendChild(li);
+            }
+        }
+    });
+</script>
+</body>
+</html>

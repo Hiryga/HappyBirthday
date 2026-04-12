@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Площадь фигуры</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        .container {
+            max-width: 400px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        select, input, button {
+            margin-top: 5px;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 5px;
+        }
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Вычисление площади</h2>
+
+    <label for="figure">Выберите фигуру:</label>
+    <select id="figure">
+        <option value="" selected disabled>Выберите...</option>
+        <option value="circle">Круг</option>
+        <option value="square">Квадрат</option>
+    </select>
+
+    <label for="value" id="valueLabel">Радиус (для круга) или сторона (для квадрата):</label>
+    <input type="number" id="value" min="0" step="0.01">
+
+    <button id="calcBtn">Рассчитать площадь</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    const figureSelect = document.getElementById('figure');
+    const valueLabel = document.getElementById('valueLabel');
+
+    figureSelect.addEventListener('change', function () {
+        if (figureSelect.value === 'circle') {
+            valueLabel.textContent = 'Радиус круга:';
+        } else if (figureSelect.value === 'square') {
+            valueLabel.textContent = 'Сторона квадрата:';
+        }
+    });
+
+    document.getElementById('calcBtn').addEventListener('click', function () {
+        const figure = figureSelect.value;
+        const val = parseFloat(document.getElementById('value').value);
+        const resultDiv = document.getElementById('result');
+
+        if (!figure || isNaN(val) || val <= 0) {
+            resultDiv.textContent = 'Выберите фигуру и введите положительное значение.';
+            return;
+        }
+
+        let area = 0;
+
+        if (figure === 'circle') {
+            area = Math.PI * val * val;
+        } else if (figure === 'square') {
+            area = val * val;
+        }
+
+        resultDiv.textContent = 'Площадь: ' + area.toFixed(1);
+    });
+</script>
+</body>
+</html>

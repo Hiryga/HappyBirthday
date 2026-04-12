@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Элементы ввода (Билет 19)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .container { max-width: 500px; border: 1px solid #ccc; padding: 20px; }
+        .row { margin-top: 10px; }
+        input[type="text"], select { width: 100%; padding: 5px; box-sizing: border-box; }
+        .result { margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Форма с разными элементами</h2>
+
+    <div class="row">
+        <label>Введите текст:</label>
+        <input type="text" id="textInput">
+    </div>
+
+    <div class="row">
+        <label>Выберите вариант:</label>
+        <select id="selectInput">
+            <option value="Вариант 1">Вариант 1</option>
+            <option value="Вариант 2">Вариант 2</option>
+            <option value="Вариант 3">Вариант 3</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <span>Выберите тип:</span><br>
+        <label><input type="radio" name="type" value="Тип A" checked> Тип A</label><br>
+        <label><input type="radio" name="type" value="Тип B"> Тип B</label><br>
+        <label><input type="radio" name="type" value="Тип C"> Тип C</label>
+    </div>
+
+    <div class="row">
+        <button id="showBtn">Показать результат</button>
+        <button id="clearBtn">Очистить</button>
+    </div>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    const textInput = document.getElementById('textInput');
+    const selectInput = document.getElementById('selectInput');
+    const resultDiv = document.getElementById('result');
+    const radios = document.getElementsByName('type');
+
+    document.getElementById('showBtn').addEventListener('click', function () {
+        let typeVal = '';
+        for (const r of radios) {
+            if (r.checked) {
+                typeVal = r.value;
+                break;
+            }
+        }
+
+        resultDiv.textContent =
+            'Текст: ' + textInput.value +
+            '; Выбор: ' + selectInput.value +
+            '; Тип: ' + typeVal;
+    });
+
+    document.getElementById('clearBtn').addEventListener('click', function () {
+        textInput.value = '';
+        selectInput.selectedIndex = 0;
+        radios[0].checked = true;
+        resultDiv.textContent = '';
+    });
+</script>
+</body>
+</html>

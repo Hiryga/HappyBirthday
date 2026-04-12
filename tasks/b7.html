@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Квадрат числа</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .container { max-width: 400px; border: 1px solid #ccc; padding: 20px; }
+        input, button { margin-top: 5px; padding: 5px; width: 100%; box-sizing: border-box; }
+        .result { margin-top: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>Вычисление квадрата числа</h2>
+
+    <label for="number">Введите число:</label>
+    <input type="number" id="number" step="0.01">
+
+    <button id="calcBtn">Вычислить квадрат</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    document.getElementById('calcBtn').addEventListener('click', function () {
+        const val = parseFloat(document.getElementById('number').value);
+        const resultDiv = document.getElementById('result');
+
+        if (isNaN(val)) {
+            resultDiv.textContent = 'Введите число.';
+            return;
+        }
+
+        const sq = val * val;
+        resultDiv.textContent = 'Квадрат числа: ' + sq.toFixed(2);
+    });
+</script>
+</body>
+</html>

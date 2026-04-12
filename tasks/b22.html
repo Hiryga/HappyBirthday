@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Графическое меню (Билет 22)</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; }
+        .menu { display: flex; align-items: center; gap: 10px; }
+        .buttons { display: flex; flex-direction: column; gap: 5px; }
+        button { width: 150px; padding: 8px; cursor: pointer; }
+        .arrow { font-size: 24px; visibility: hidden; }
+    </style>
+</head>
+<body>
+<h2>Графическое меню</h2>
+
+<div class="menu">
+    <div class="arrow" id="arrow">➤</div>
+    <div class="buttons">
+        <button data-url="https://example.com/page1">Страница 1</button>
+        <button data-url="https://example.com/page2">Страница 2</button>
+        <button data-url="https://example.com/page3">Страница 3</button>
+    </div>
+</div>
+
+<script>
+    const arrow = document.getElementById('arrow');
+    const buttons = document.querySelectorAll('.buttons button');
+
+    buttons.forEach(btn => {
+        // Позиционируем стрелку при наведении
+        btn.addEventListener('mouseenter', function () {
+            const rectBtn = btn.getBoundingClientRect();
+            const rectArrow = arrow.getBoundingClientRect();
+
+            arrow.style.position = 'absolute';
+            arrow.style.left = (rectBtn.left - rectArrow.width - 10) + 'px';
+            arrow.style.top = (rectBtn.top + (rectBtn.height - rectArrow.height) / 2) + 'px';
+            arrow.style.visibility = 'visible';
+        });
+
+        // Можно спрятать стрелку при уходе мыши (по желанию)
+        btn.addEventListener('mouseleave', function () {
+            // arrow.style.visibility = 'hidden';
+        });
+
+        // Переход по ссылке остаётся по клику
+        btn.addEventListener('click', function () {
+            const url = btn.getAttribute('data-url');
+            window.location.href = url;
+        });
+    });
+</script>
+</body>
+</html>
