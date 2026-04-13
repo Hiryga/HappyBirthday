@@ -1,0 +1,64 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Test\\UnitTest3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AA57A228-078D-4415-8A8C-1F7208BFAE32}|UnitTest3\\UnitTest3.csproj|f:\\test\\unittest3\\unittest3\\unittest3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA57A228-078D-4415-8A8C-1F7208BFAE32}|UnitTest3\\UnitTest3.csproj|solutionrelative:unittest3\\unittest3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AA57A228-078D-4415-8A8C-1F7208BFAE32}|UnitTest3\\UnitTest3.csproj|F:\\Test\\UnitTest3\\unittest3\\mathoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AA57A228-078D-4415-8A8C-1F7208BFAE32}|UnitTest3\\UnitTest3.csproj|solutionrelative:unittest3\\mathoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MathOperations.cs",
+              "DocumentMoniker": "F:\\Test\\UnitTest3\\UnitTest3\\MathOperations.cs",
+              "RelativeDocumentMoniker": "UnitTest3\\MathOperations.cs",
+              "ToolTip": "F:\\Test\\UnitTest3\\UnitTest3\\MathOperations.cs",
+              "RelativeToolTip": "UnitTest3\\MathOperations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T17:45:32.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest3.cs",
+              "DocumentMoniker": "F:\\Test\\UnitTest3\\UnitTest3\\UnitTest3.cs",
+              "RelativeDocumentMoniker": "UnitTest3\\UnitTest3.cs",
+              "ToolTip": "F:\\Test\\UnitTest3\\UnitTest3\\UnitTest3.cs",
+              "RelativeToolTip": "UnitTest3\\UnitTest3.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T17:45:01.145Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

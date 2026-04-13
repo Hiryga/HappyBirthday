@@ -1,0 +1,64 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Test\\UnitTest10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{09564990-BBD7-467E-AF73-F425381B6355}|UnitTest10\\UnitTest10.csproj|f:\\test\\unittest10\\unittest10\\unittest10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09564990-BBD7-467E-AF73-F425381B6355}|UnitTest10\\UnitTest10.csproj|solutionrelative:unittest10\\unittest10.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09564990-BBD7-467E-AF73-F425381B6355}|UnitTest10\\UnitTest10.csproj|f:\\test\\unittest10\\unittest10\\stringoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09564990-BBD7-467E-AF73-F425381B6355}|UnitTest10\\UnitTest10.csproj|solutionrelative:unittest10\\stringoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StringOperations.cs",
+              "DocumentMoniker": "F:\\Test\\UnitTest10\\UnitTest10\\StringOperations.cs",
+              "RelativeDocumentMoniker": "UnitTest10\\StringOperations.cs",
+              "ToolTip": "F:\\Test\\UnitTest10\\UnitTest10\\StringOperations.cs",
+              "RelativeToolTip": "UnitTest10\\StringOperations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T21:11:47.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest10.cs",
+              "DocumentMoniker": "F:\\Test\\UnitTest10\\UnitTest10\\UnitTest10.cs",
+              "RelativeDocumentMoniker": "UnitTest10\\UnitTest10.cs",
+              "ToolTip": "F:\\Test\\UnitTest10\\UnitTest10\\UnitTest10.cs*",
+              "RelativeToolTip": "UnitTest10\\UnitTest10.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T21:11:20.701Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

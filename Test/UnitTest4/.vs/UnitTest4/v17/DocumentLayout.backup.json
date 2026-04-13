@@ -1,0 +1,64 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\Test\\UnitTest4\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8D24A76F-E116-4A51-954C-55E1C67F6A37}|UnitTest4\\UnitTest4.csproj|f:\\test\\unittest4\\unittest4\\unittest4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D24A76F-E116-4A51-954C-55E1C67F6A37}|UnitTest4\\UnitTest4.csproj|solutionrelative:unittest4\\unittest4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D24A76F-E116-4A51-954C-55E1C67F6A37}|UnitTest4\\UnitTest4.csproj|f:\\test\\unittest4\\unittest4\\mathoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D24A76F-E116-4A51-954C-55E1C67F6A37}|UnitTest4\\UnitTest4.csproj|solutionrelative:unittest4\\mathoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UnitTest4.cs",
+              "DocumentMoniker": "F:\\Test\\UnitTest4\\UnitTest4\\UnitTest4.cs",
+              "RelativeDocumentMoniker": "UnitTest4\\UnitTest4.cs",
+              "ToolTip": "F:\\Test\\UnitTest4\\UnitTest4\\UnitTest4.cs*",
+              "RelativeToolTip": "UnitTest4\\UnitTest4.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T19:05:01.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MathOperations.cs",
+              "DocumentMoniker": "F:\\Test\\UnitTest4\\UnitTest4\\MathOperations.cs",
+              "RelativeDocumentMoniker": "UnitTest4\\MathOperations.cs",
+              "ToolTip": "F:\\Test\\UnitTest4\\UnitTest4\\MathOperations.cs",
+              "RelativeToolTip": "UnitTest4\\MathOperations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-13T19:05:17.015Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
