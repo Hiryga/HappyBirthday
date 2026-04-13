@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Регистрационная страница</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px 16px; font-size: 13px; }
+    h1 { font-size: 16px; font-weight: bold; margin: 0 0 8px 0; }
+    p.sub { margin: 0 0 14px 0; font-size: 13px; }
+    .field-row { margin-bottom: 6px; font-size: 13px; }
+    .field-row label { display: inline-block; width: 200px; text-align: right; padding-right: 6px; }
+    .field-row input[type=text], .field-row input[type=password] {
+      width: 160px; border: 2px inset #999; padding: 1px 2px; font-size: 13px;
+    }
+    .section { margin: 12px 0 6px 0; font-weight: bold; font-size: 13px; }
+    .radio-row { margin-bottom: 6px; font-size: 13px; }
+    .radio-row label { margin-right: 8px; }
+    .checkbox-col { margin-bottom: 4px; }
+    .checkbox-col label { display: block; margin-bottom: 3px; font-size: 13px; }
+    select[multiple] { width: 80px; height: 42px; border: 2px inset #999; font-size: 12px; display: block; margin-bottom: 10px; }
+    textarea { width: 220px; height: 60px; border: 2px inset #999; font-size: 12px; display: block; margin-bottom: 8px; resize: none; }
+    .btn-row { margin-top: 4px; }
+    input[type=button], input[type=reset] {
+      padding: 2px 10px; font-size: 13px; border: 2px outset #ccc;
+      background: #d4d0c8; cursor: pointer; margin-right: 4px;
+    }
+    input[type=button]:active, input[type=reset]:active { border-style: inset; }
+  </style>
+</head>
+<body>
+
+  <h1>Регистрационная страница Клуба любителей фантастики</h1>
+  <p class="sub">Заполнив анкету, вы сможете пользоваться нашей электронной библиотекой</p>
+
+  <div class="field-row">
+    <label>Введите регистрационное имя:</label>
+    <input type="text" id="login">
+  </div>
+  <div class="field-row">
+    <label>Введите пароль:</label>
+    <input type="password" id="pass1">
+  </div>
+  <div class="field-row">
+    <label>Подтвердите пароль:</label>
+    <input type="password" id="pass2">
+  </div>
+
+  <div class="section">Ваш возраст:</div>
+  <div class="radio-row">
+    <label><input type="radio" name="age" value="<20" checked> До 20</label>
+    <label><input type="radio" name="age" value="20-30"> 20-30</label>
+    <label><input type="radio" name="age" value="30-50"> 30-50</label>
+    <label><input type="radio" name="age" value=">50"> старше 50</label>
+  </div>
+
+  <div class="section">На каких языках вы читаете?</div>
+  <div class="checkbox-col">
+    <label><input type="checkbox" id="lang-ru" checked> Русский</label>
+    <label><input type="checkbox" id="lang-de"> Немецкий</label>
+    <label><input type="checkbox" id="lang-fr"> Французский</label>
+  </div>
+
+  <div class="section">Какой формат данных является для вас предпочтительным?</div>
+  <select multiple id="fmt">
+    <option selected>HTML</option>
+    <option>Plain text</option>
+    <option>PDF</option>
+  </select>
+
+  <div class="section">Ваши любимые авторы:</div>
+  <textarea id="authors"></textarea>
+
+  <div class="btn-row">
+    <input type="button" value="OK" onclick="submit()">
+    <input type="button" value="Очистить" onclick="clearForm()">
+  </div>
+
+<script>
+function submit() {
+  var login = document.getElementById('login').value.trim();
+  var p1 = document.getElementById('pass1').value;
+  var p2 = document.getElementById('pass2').value;
+  if (!login) { alert('Введите регистрационное имя'); return; }
+  if (p1 !== p2) { alert('Пароли не совпадают'); return; }
+  alert('Регистрация прошла успешно!\nИмя: ' + login);
+}
+function clearForm() {
+  document.getElementById('login').value = '';
+  document.getElementById('pass1').value = '';
+  document.getElementById('pass2').value = '';
+  document.getElementById('authors').value = '';
+  document.getElementById('lang-ru').checked = true;
+  document.getElementById('lang-de').checked = false;
+  document.getElementById('lang-fr').checked = false;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Студенческое проектное бюро</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; font-size: 13px; }
+
+    #header {
+      background: #ffff00;
+      padding: 6px 10px 4px 10px;
+      border-bottom: 1px solid #999;
+    }
+    #header h1 {
+      font-family: 'Times New Roman', serif;
+      font-style: italic;
+      font-size: 26px;
+      text-align: center;
+      color: #000;
+    }
+    #header p {
+      text-align: center;
+      font-size: 12px;
+      color: #333;
+      font-style: italic;
+    }
+
+    #main { display: flex; }
+
+    #sidebar {
+      width: 130px;
+      min-height: 500px;
+      background: #00ffff;
+      padding: 8px 10px;
+      flex-shrink: 0;
+    }
+    #sidebar a {
+      display: block;
+      color: #000;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
+    #sidebar a:hover { text-decoration: underline; }
+
+    #content {
+      flex: 1;
+      background: #00ffff;
+      padding: 10px 14px;
+      color: #000;
+    }
+
+    /* 1-й абзац: увеличенная первая буква */
+    #content p:nth-of-type(1)::first-letter {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #cc0000;
+      float: left;
+      line-height: 0.85;
+      margin-right: 2px;
+    }
+
+    /* 2-й абзац: всегда курсив */
+    #content p:nth-of-type(2) {
+      font-style: italic;
+    }
+
+    #content p {
+      margin-bottom: 10px;
+      font-size: 12px;
+      line-height: 1.5;
+      overflow: hidden;
+    }
+    #content img { display: block; margin: 8px auto; }
+  </style>
+</head>
+<body>
+
+<div id="header">
+  <h1>Студенческое проектное бюро</h1>
+  <p>Проектируем, программируем, моделируем,..., принимаем заказы.</p>
+</div>
+
+<div id="main">
+  <div id="sidebar">
+    <a href="#">Главная</a>
+    <a href="#">Проекты</a>
+    <a href="#">Новости</a>
+    <a href="#">Форум</a>
+    <a href="#">Контакты</a>
+    <a href="#">Партфолио</a>
+    <a href="#">Фотогалерея</a>
+  </div>
+
+  <div id="content">
+    <p>Студенческое бюро принимает заказы на создание
+    автоматизированных рабочих мест, презентаций,
+    сайтов,  демонстрационных роликов, программных
+    продуктов, решающих задачи из различных
+    прикладных областей.</p>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Oldcomputer.jpg/120px-Oldcomputer.jpg"
+         width="120" height="100" alt="компьютер">
+
+    <p>В нашем "Партфолио" вы можете познакомиться
+    с богатым разнообразием готовых программных
+    продуктов продуктов; продуктов, созданных
+    посредством использования различных пакетов
+    прикладных программм.</p>
+
+    <p>"Проекты"  содержат  информацию о проектах,
+    находящихся в разработке.</p>
+
+    <p>"Контакты" помогут вам установить связь с
+    создателями проектов.</p>
+
+    <p>"Форум" позволит нам общаться со старыми
+    друзьями и приобрести новых.</p>
+  </div>
+</div>
+
+</body>
+</html>

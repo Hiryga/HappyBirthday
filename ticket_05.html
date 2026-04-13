@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Меню</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px 12px; font-size: 13px; }
+    h2 { font-size: 18px; font-weight: bold; margin: 0 0 14px 0; }
+    .menu-table { border-collapse: collapse; margin-left: 60px; }
+    .menu-table td { padding: 3px 0; vertical-align: middle; }
+    .arrow-cell { width: 36px; font-size: 20px; color: #cc0000; font-weight: bold; text-align: center; }
+    .btn-cell a {
+      display: block;
+      width: 160px;
+      padding: 6px 0;
+      background: #7b68c8;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .btn-cell a:hover { background: #9b88e8; }
+    .btn-cell a.active-link { background: #aaaaaa; }
+  </style>
+</head>
+<body>
+  <h2>содержание</h2>
+
+  <table class="menu-table" id="menu">
+    <tr>
+      <td class="arrow-cell" id="arr-0"></td>
+      <td class="btn-cell"><a href="#" onclick="go(0,'scenariy.html');return false;">Сценарий</a></td>
+    </tr>
+    <tr>
+      <td class="arrow-cell" id="arr-1"></td>
+      <td class="btn-cell"><a href="#" onclick="go(1,'sobytie.html');return false;">Событие</a></td>
+    </tr>
+    <tr>
+      <td class="arrow-cell" id="arr-2"></td>
+      <td class="btn-cell"><a href="#" onclick="go(2,'funkcii.html');return false;" class="active-link">Функции</a></td>
+    </tr>
+    <tr>
+      <td class="arrow-cell" id="arr-3"></td>
+      <td class="btn-cell"><a href="#" onclick="go(3,'obekty.html');return false;">Объекты</a></td>
+    </tr>
+  </table>
+
+<script>
+var current = 2;
+// Показать стрелку у текущего элемента при загрузке
+document.getElementById('arr-' + current).innerHTML = '&#10145;';
+
+function go(idx, page) {
+  // Убрать предыдущую стрелку
+  document.getElementById('arr-' + current).innerHTML = '';
+  current = idx;
+  // Показать стрелку у выбранного
+  document.getElementById('arr-' + idx).innerHTML = '&#10145;';
+  alert('Переход на страницу: ' + page);
+}
+</script>
+</body>
+</html>

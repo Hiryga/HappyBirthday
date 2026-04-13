@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Страница опроса</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px 12px; font-size: 13px; }
+    h1 { font-size: 22px; font-weight: bold; margin: 0 0 14px 0; }
+    h3 { font-size: 14px; font-weight: bold; margin: 0 0 6px 0; }
+    p { margin: 0 0 6px 0; }
+    input[type=text] { width: 220px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; display: block; margin-bottom: 8px; }
+    .checkbox-row { margin-bottom: 10px; }
+    .checkbox-row label { margin-right: 16px; font-size: 13px; }
+    input[type=button] {
+      padding: 3px 16px; font-size: 13px;
+      border: 2px outset #ccc; background: #d4d0c8;
+      cursor: pointer; letter-spacing: 1px; font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    input[type=button]:active { border-style: inset; }
+    .lists-row { display: flex; gap: 30px; margin-top: 6px; }
+    .list-col { }
+    .list-col p { font-size: 13px; margin-bottom: 4px; }
+    textarea { width: 160px; height: 55px; border: 2px inset #999; font-size: 12px; resize: none; }
+  </style>
+</head>
+<body>
+
+  <h1>Страница опроса</h1>
+
+  <h3>Введите свою фамилию</h3>
+  <input type="text" id="fam" value="">
+
+  <h3>Что вы любите больше?</h3>
+  <div class="checkbox-row">
+    <label><input type="checkbox" id="ice"> мороженое</label>
+    <label><input type="checkbox" id="choco"> шоколад</label>
+  </div>
+
+  <input type="button" value="Регистрация" onclick="register()">
+
+  <div class="lists-row">
+    <div class="list-col">
+      <p>любители мороженого</p>
+      <textarea id="list-ice" readonly></textarea>
+    </div>
+    <div class="list-col">
+      <p>любители шоколада</p>
+      <textarea id="list-choco" readonly></textarea>
+    </div>
+  </div>
+
+<script>
+var iceList = [], chocoList = [];
+
+function register() {
+  var fam = document.getElementById('fam').value.trim();
+  if (!fam) { alert('Введите фамилию'); return; }
+  var ice   = document.getElementById('ice').checked;
+  var choco = document.getElementById('choco').checked;
+  if (!ice && !choco) { alert('Выберите предпочтение'); return; }
+
+  if (ice)   iceList.push(fam);
+  if (choco) chocoList.push(fam);
+
+  document.getElementById('list-ice').value   = iceList.join('\n');
+  document.getElementById('list-choco').value = chocoList.join('\n');
+
+  alert('Благодарим за участие');
+
+  // сброс
+  document.getElementById('fam').value = '';
+  document.getElementById('ice').checked   = false;
+  document.getElementById('choco').checked = false;
+}
+</script>
+</body>
+</html>

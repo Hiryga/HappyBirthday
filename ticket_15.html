@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Вычисление площади</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px; font-size: 13px; }
+    h2 { font-size: 18px; font-weight: bold; margin: 0 0 10px 0; }
+    p { margin: 0 0 6px 0; }
+    input[type=text] { width: 160px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; display: block; margin-bottom: 4px; }
+    input[type=button] { padding: 2px 12px; font-size: 13px; border: 2px outset #ccc; background: #d4d0c8; cursor: pointer; margin-bottom: 10px; }
+    input[type=button]:active { border-style: inset; }
+    .radio-row { margin-bottom: 8px; }
+    label { margin-right: 12px; font-size: 13px; }
+    h3 { font-size: 15px; font-weight: bold; margin: 10px 0 6px 0; }
+  </style>
+</head>
+<body>
+  <h2>Выберите форму</h2>
+  <div class="radio-row">
+    <label><input type="radio" name="shape" value="circle" checked> круг</label>
+    <label><input type="radio" name="shape" value="square"> квадрат</label>
+  </div>
+  <p>Выберите размер( радиус круга или сторону квадрата)</p>
+  <input type="text" id="size" value="">
+  <input type="button" value="Вычислить" onclick="calc()">
+  <h3>Результат</h3>
+  <input type="text" id="result" value="">
+  <input type="button" value="Очистить" onclick="document.getElementById('size').value=''; document.getElementById('result').value='';">
+<script>
+function calc() {
+  var v = parseFloat(document.getElementById('size').value);
+  if (isNaN(v) || v <= 0) { alert('Введите положительное число'); return; }
+  var shape = document.querySelector('input[name=shape]:checked').value;
+  var res = shape === 'circle' ? Math.PI * v * v : v * v;
+  document.getElementById('result').value = Math.round(res * 100) / 100;
+}
+</script>
+</body>
+</html>

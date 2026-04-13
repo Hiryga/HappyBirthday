@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Исходные числа</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px 12px; font-size: 13px; }
+    h3 { font-size: 14px; font-weight: bold; margin: 0 0 8px 0; }
+    input[type=text] { width: 180px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; display: block; margin-bottom: 6px; }
+    input[type=button] { padding: 2px 10px; font-size: 13px; border: 2px outset #ccc; background: #d4d0c8; cursor: pointer; margin-right: 4px; }
+    input[type=button]:active { border-style: inset; }
+    #output { font-size: 13px; font-weight: bold; margin-top: 12px; }
+    .nums { margin-bottom: 10px; font-size: 13px; line-height: 2; }
+  </style>
+</head>
+<body>
+
+  <h3>Исходные числа</h3>
+
+  <input type="text" id="n1" placeholder="">
+  <input type="text" id="n2" placeholder="">
+  <input type="text" id="n3" placeholder="">
+
+  <input type="button" value="Пуск" onclick="calc()">
+  <input type="button" value="Очистить" onclick="clearAll()">
+
+  <div id="output"></div>
+
+<script>
+function calc() {
+  var a = parseFloat(document.getElementById('n1').value);
+  var b = parseFloat(document.getElementById('n2').value);
+  var c = parseFloat(document.getElementById('n3').value);
+  if (isNaN(a) || isNaN(b) || isNaN(c)) { alert('Введите три числа'); return; }
+  var sum = a + b + c;
+  document.getElementById('output').innerHTML =
+    '<div class="nums">' + a + '<br>' + b + '<br>' + c + '</div>' +
+    'Сумма введенных чисел = ' + sum;
+}
+function clearAll() {
+  document.getElementById('n1').value = '';
+  document.getElementById('n2').value = '';
+  document.getElementById('n3').value = '';
+  document.getElementById('output').innerHTML = '';
+}
+</script>
+</body>
+</html>

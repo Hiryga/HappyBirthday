@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Тестовая программа - Microsoft Internet Explorer</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px 12px; font-size: 13px; }
+    h2 { font-size: 14px; font-weight: bold; margin: 0 0 4px 0; text-transform: uppercase; }
+    p { margin: 0 0 6px 0; font-size: 13px; }
+    h3 { font-size: 13px; font-weight: bold; margin: 8px 0 4px 0; }
+    table { border-collapse: collapse; margin: 8px 0; }
+    table th { background: #ffd700; border: 1px solid #000; padding: 3px 10px; font-size: 13px; text-align: center; }
+    table td { background: #ffd700; border: 1px solid #000; padding: 3px 6px; font-size: 13px; }
+    table td input[type=text] { width: 120px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; background: #fff; }
+    .btn-row { margin: 10px 0 6px 0; }
+    input[type=button] { padding: 2px 14px; font-size: 13px; border: 2px outset #ccc; background: #d4d0c8; cursor: pointer; margin-right: 6px; }
+    input[type=button]:active { border-style: inset; }
+    .answer-row { margin: 4px 0; font-size: 13px; }
+    .answer-row input[type=text] { width: 130px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h2>Тестовая программа</h2>
+  <p>ТЕСТИРОВАНИЕ ПО JAVASCRIPT С ПОМОЩЬЮ JAVASCRIPT</p>
+  <h3>Задание 1.</h3>
+  <p>1. Между какими тэгами можно записать скрипт</p>
+
+  <table>
+    <tr>
+      <th>Вопрос</th>
+      <th>Ввод ответа</th>
+    </tr>
+    <tr>
+      <td>1. Открывающий тэг</td>
+      <td><input type="text" id="a1"></td>
+    </tr>
+    <tr>
+      <td>1. Закрывающий тэг</td>
+      <td><input type="text" id="a2"></td>
+    </tr>
+  </table>
+
+  <div class="btn-row">
+    <input type="button" value="Принять ответ" onclick="check()">
+  </div>
+  <div class="answer-row">
+    Ответ: <input type="text" id="verdict" readonly>
+  </div>
+  <div class="btn-row">
+    <input type="button" value="Очистка полей" onclick="clearAll()">
+  </div>
+
+<script>
+function check() {
+  var a1 = document.getElementById('a1').value.trim().toLowerCase();
+  var a2 = document.getElementById('a2').value.trim().toLowerCase();
+  var ok1 = a1 === '<script>' || a1 === 'script' || a1 === '<script>';
+  var ok2 = a2 === '</script>' || a2 === '/script' || a2 === '</script>';
+  if (ok1 && ok2) {
+    document.getElementById('verdict').value = 'Верно!';
+  } else {
+    document.getElementById('verdict').value = 'Неверно. Правильно: <script> и </script>';
+  }
+}
+function clearAll() {
+  document.getElementById('a1').value = '';
+  document.getElementById('a2').value = '';
+  document.getElementById('verdict').value = '';
+}
+</script>
+</body>
+</html>

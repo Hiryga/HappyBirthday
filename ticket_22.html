@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Исследование свойств изображений</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px 12px; font-size: 13px; text-align: center; }
+    h2 { font-size: 15px; font-weight: bold; margin: 6px 0 14px 0; text-align: center; }
+    img#pic { display: block; margin: 0 auto 14px auto; }
+    p { margin: 0 0 4px 0; font-size: 13px; text-align: center; }
+    .row { margin: 4px 0; font-size: 13px; text-align: right; max-width: 340px; margin-left: auto; margin-right: auto; }
+    .row input[type=text] { width: 90px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; }
+    .btn-row { margin: 10px 0; }
+    input[type=button] { padding: 2px 14px; font-size: 13px; border: 2px outset #ccc; background: #d4d0c8; cursor: pointer; margin: 0 4px; }
+    input[type=button]:active { border-style: inset; }
+  </style>
+</head>
+<body>
+  <h2>Встраиваемые изображения</h2>
+
+  <img id="pic"
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Oldcomputer.jpg/200px-Oldcomputer.jpg"
+    width="120" height="110" alt="компьютер" border="0">
+
+  <p>Для изменения размеров изображения введите значение одного<br>
+  или двух параметров и нажмите кнопку <b>Просмотр</b></p>
+  <div class="row">ширина (Width): <input type="text" id="iw"></div>
+  <div class="row">высота (height): <input type="text" id="ih"></div>
+  <p>Для задания рамки введите число, определяющее толщину рамки<br>
+  в пикселах, и нажмите на кнопку <b>Просмотр</b></p>
+  <div class="row">толщина рамки(border): <input type="text" id="ib" value="0"></div>
+  <div class="row">Альтернативный текст (alt): <input type="text" id="ia"></div>
+
+  <div class="btn-row">
+    <input type="button" value="Просмотр" onclick="preview()">
+    <input type="button" value="Отменить" onclick="reset()">
+  </div>
+
+<script>
+function preview() {
+  var pic = document.getElementById('pic');
+  var w = document.getElementById('iw').value;
+  var h = document.getElementById('ih').value;
+  var b = document.getElementById('ib').value;
+  var a = document.getElementById('ia').value;
+  if (w !== '') pic.width  = parseInt(w);
+  if (h !== '') pic.height = parseInt(h);
+  pic.style.border = (parseInt(b) || 0) + 'px solid #000';
+  if (a !== '') pic.alt = a;
+}
+function reset() {
+  var pic = document.getElementById('pic');
+  pic.width = 120; pic.height = 110; pic.style.border = 'none';
+  document.getElementById('iw').value = '';
+  document.getElementById('ih').value = '';
+  document.getElementById('ib').value = '0';
+  document.getElementById('ia').value = '';
+}
+</script>
+</body>
+</html>

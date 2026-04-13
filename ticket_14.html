@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Вычисление стоимости подписки</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px; font-size: 13px; }
+    h2 { font-size: 16px; font-weight: bold; margin: 0 0 12px 0; }
+    p { margin: 0 0 6px 0; }
+    input[type=text] { width: 160px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; display: block; margin-bottom: 4px; }
+    input[type=button] { padding: 2px 12px; font-size: 13px; border: 2px outset #ccc; background: #d4d0c8; cursor: pointer; margin-bottom: 12px; }
+    input[type=button]:active { border-style: inset; }
+    hr { border: none; border-top: 1px solid #999; margin: 8px 0; }
+  </style>
+</head>
+<body>
+  <h2>Вычисление стоимости подписки</h2>
+  <p>Введите срок подписного периода: 1, 3, 6, 12</p>
+  <input type="text" id="period" value="">
+  <input type="button" value="Определить" onclick="calc()">
+  <hr>
+  <p>Стоимость подписки:</p>
+  <input type="text" id="result" value="">
+  <input type="button" value="Отменить" onclick="document.getElementById('period').value=''; document.getElementById('result').value='';">
+<script>
+function calc() {
+  var p = parseInt(document.getElementById('period').value);
+  var price;
+  switch(p) {
+    case 1:  price = 100;  break;
+    case 3:  price = 270;  break;
+    case 6:  price = 510;  break;
+    case 12: price = 960;  break;
+    default:
+      alert('Введите одно из значений: 1, 3, 6, 12');
+      return;
+  }
+  document.getElementById('result').value = price + ' руб.';
+}
+</script>
+</body>
+</html>

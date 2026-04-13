@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="windows-1251">
+  <title>Мои друзья</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #fff; margin: 8px 12px; font-size: 13px; }
+    h2 { font-size: 16px; font-weight: bold; margin: 0 0 10px 0; }
+    input[type=text] { width: 160px; border: 2px inset #999; padding: 1px 2px; font-size: 13px; display: block; margin-bottom: 4px; }
+    input[type=button] { padding: 2px 10px; font-size: 13px; border: 2px outset #ccc; background: #d4d0c8; cursor: pointer; display: block; margin-bottom: 6px; }
+    input[type=button]:active { border-style: inset; }
+    #output { margin-top: 12px; font-size: 13px; }
+    #output h3 { font-size: 14px; font-weight: bold; margin: 0 0 6px 0; }
+  </style>
+</head>
+<body>
+
+  <h2>Мои друзья</h2>
+
+  <input type="text" id="f1" value="">
+  <input type="text" id="f2" value="">
+  <input type="text" id="f3" value="">
+  <input type="button" value="Пуск"      onclick="show()">
+  <input type="button" value="Очистить"  onclick="clearAll()">
+
+  <div id="output"></div>
+
+<script>
+function show() {
+  var a = document.getElementById('f1').value.trim();
+  var b = document.getElementById('f2').value.trim();
+  var c = document.getElementById('f3').value.trim();
+  if (!a && !b && !c) { alert('Введите хотя бы одно имя'); return; }
+  var html = '<h3>Привет всем моим друзьям</h3>';
+  if (a) html += a + '<br>';
+  if (b) html += b + '<br>';
+  if (c) html += c + '<br>';
+  document.getElementById('output').innerHTML = html;
+}
+function clearAll() {
+  document.getElementById('f1').value = '';
+  document.getElementById('f2').value = '';
+  document.getElementById('f3').value = '';
+  document.getElementById('output').innerHTML = '';
+}
+</script>
+</body>
+</html>
