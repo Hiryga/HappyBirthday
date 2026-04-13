@@ -56,7 +56,7 @@ function check() {
   var a2 = document.getElementById('a2').value.trim().toLowerCase();
 
   var ok1 = a1 === '<script>' || a1 === 'script';
-  var ok2 = a2 === '</scr' + 'ipt>' || a2 === '/script';
+  var ok2 = a2 === '<\/script>' || a2 === '/script';
 
   if (ok1 && ok2) {
     document.getElementById('verdict').value = 'Верно!';
